@@ -5,8 +5,69 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProduktyBindowanie"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="MainWindow" Height="250" Width="400">
+    <Grid x:Name="gridProdukt">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label
+            Grid.Row="0"
+            Content="symbol"
+            VerticalContentAlignment="Center"
+            />
+        <Label
+            Grid.Row="1"
+            Content="nazwa"
+            VerticalContentAlignment="Center"
+            />
+        <Label
+            Grid.Row="2"
+            Content="liczba sztuk"
+            VerticalContentAlignment="Center"
+            />
+        <Label
+            Grid.Row="3"
+            Content="magazyn"
+            VerticalContentAlignment="Center"
+            />
+        <TextBox
+            Grid.Column="1"
+            Grid.Row="0"
+            VerticalAlignment="Center"
+            Margin="5"
+            Text="{Binding Symbol}"/>
+        <TextBox
+            Grid.Column="1"
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            Margin="5"
+            Text="{Binding Nazwa}"/>
+        <TextBox
+            Grid.Column="1"
+            Grid.Row="2"
+            VerticalAlignment="Center"
+            Margin="5"
+            Text="{Binding LiczbaSztuk}"/>
+        <TextBox
+            Grid.Column="1"
+            Grid.Row="3"
+            VerticalAlignment="Center"
+            Margin="5"
+            Text="{Binding Magazyn}"/>
+        <Button
+            Grid.Column="1"
+            Grid.Row="5"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Margin="5"
+            Content="Potwierdź" Click="Button_Click"/>
     </Grid>
 </Window>

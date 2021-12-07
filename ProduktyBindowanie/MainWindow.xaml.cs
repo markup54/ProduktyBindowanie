@@ -20,9 +20,22 @@ namespace ProduktyBindowanie
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Produkt p1 = null;
         public MainWindow()
         {
             InitializeComponent();
+            PrzygotujWiazanie();
+        }
+
+        private void PrzygotujWiazanie()
+        {
+            p1 = new Produkt("st", "ser topiony", 200, "Gliwice");
+            gridProdukt.DataContext = p1;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(p1.ToString());
         }
     }
 }
