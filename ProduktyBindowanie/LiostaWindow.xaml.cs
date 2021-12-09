@@ -20,7 +20,7 @@ namespace ProduktyBindowanie
     /// </summary>
     public partial class LiostaWindow : Window
     {
-        private ObservableCollection<Produkt> ListaProduktow = null;
+        internal ObservableCollection<Produkt> ListaProduktow = null;
         public LiostaWindow()
         {
             InitializeComponent();
@@ -41,6 +41,21 @@ namespace ProduktyBindowanie
         {
             Window1 okno1 = new Window1(this);
             okno1.ShowDialog();
+        }
+
+        private void listaProd_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            Produkt produktZListy  = listaProd.SelectedItem as Produkt;
+            MessageBoxResult odpowiedz=MessageBox.Show("Czy na pewno usunąć produkt " + produktZListy.ToString() + "?"
+                , "Pytanie",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question);
+            if(odpowiedz == MessageBoxResult.Yes)
+            {
+                //MessageBox.Show("Usuwamy");
+                ListaProduktow.Remove(produktZListy);
+
+            }
         }
     }
 }

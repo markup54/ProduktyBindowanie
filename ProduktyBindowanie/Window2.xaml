@@ -1,12 +1,12 @@
-﻿<Window x:Class="ProduktyBindowanie.Window1"
+﻿<Window x:Class="ProduktyBindowanie.Window2"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProduktyBindowanie"
         mc:Ignorable="d"
-        Title="Window1" Height="250" Width="400">
-    <Grid x:Name="gridProduktSzcz">
+         Title="Window1" Height="250" Width="400">
+    <Grid x:Name="gridProduktNowy">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>

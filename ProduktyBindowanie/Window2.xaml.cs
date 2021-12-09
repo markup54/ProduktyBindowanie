@@ -15,36 +15,30 @@ using System.Windows.Shapes;
 namespace ProduktyBindowanie
 {
     /// <summary>
-    /// Logika interakcji dla klasy Window1.xaml
+    /// Logika interakcji dla klasy Window2.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Window2 : Window
     {
-        private LiostaWindow listaWindow = null;
-        public Window1()
+        LiostaWindow listaWindow = null;
+        public Window2()
         {
             InitializeComponent();
         }
-
-        public Window1(LiostaWindow listaW)
+        public Window2(LiostaWindow listaW)
         {
             InitializeComponent();
-            this.listaWindow = listaW;
+            listaWindow = listaW;
             PrzygotujWiazanie();
-
         }
-
         private void PrzygotujWiazanie()
         {
-            Produkt produktZListy = listaWindow.listaProd.SelectedItem as Produkt;
-            if (produktZListy != null)
-            {
-                gridProduktSzcz.DataContext = produktZListy;
-            }
+            Produkt nowyProdukt = new Produkt("symbol", "jakas nazwa", 23, "mag");
+            gridProduktNowy.DataContext = nowyProdukt;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            listaWindow.ListaProduktow.Add()
         }
     }
 }

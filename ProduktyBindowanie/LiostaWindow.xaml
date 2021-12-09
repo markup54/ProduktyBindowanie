@@ -13,8 +13,8 @@
             
         </Style>
     </Window.Resources>
-    <Grid>
-        <ListView x:Name="listaProd" MouseDoubleClick="listaProd_MouseDoubleClick" >
+    <StackPanel>
+        <ListView x:Name="listaProd" MouseDoubleClick="listaProd_MouseDoubleClick" MouseRightButtonUp="listaProd_MouseRightButtonUp" >
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
@@ -42,5 +42,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
-    </Grid>
+        <Button Content="Dodaj produkt" 
+                HorizontalAlignment="Right" 
+                Margin="10"/>
+    </StackPanel>
 </Window>
