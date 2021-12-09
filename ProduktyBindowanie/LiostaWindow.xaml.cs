@@ -36,5 +36,11 @@ namespace ProduktyBindowanie
             ListaProduktow.Add(new Produkt("st", "serek topiony", 150, "Gliwice"));
             listaProd.ItemsSource = ListaProduktow;
         }
+
+        private void listaProd_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Window1 okno1 = new Window1(this);
+            okno1.ShowDialog();
+        }
     }
 }
